@@ -1,0 +1,11 @@
+[
+
+{ 
+"id":3,
+"imageUrl":"coke.jpeg",
+"text":"16oz of refreshing classic coke.", 
+"title":"Coca-Cola", 
+"price":"$1.50", 
+"published":true }
+
+]

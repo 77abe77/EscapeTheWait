@@ -1,0 +1,34 @@
+[
+{ 
+"id":0,
+"imageUrl":"SuperNachos.png",
+"text":"Melted cheddar cheese, mild salsa, olives, jalapeno peppers, ground beef on top of tortilla chips.", "title":"Super Nachos", 
+"price":"$15.99", 
+"published":true 
+},
+{ 
+"id":1,
+"imageUrl":"SuperNachos.png",
+"text":"Melted cheddar cheese, mild salsa, olives, jalapeno peppers, ground beef on top of tortilla chips.", "title":"Super Nachos 2", 
+"price":"$15.99", 
+"published":true 
+},
+
+{ 
+"id":2,
+"imageUrl":"enchilada2.jpeg",
+"text":"Ground beef, chopped green onions, olives, green chilies,cilantro, cheddar cheese wrapped in corn tortillas.", 
+"title":"Enchilada", 
+"price":"$9.99", 
+"published":true },
+
+
+
+{ 
+"id":4,
+"imageUrl":"SuperNachos.png",
+"text":"Melted cheddar cheese, mild salsa, olives, jalapeno peppers, ground beef on top of tortilla chips.", "title":"Super Nachos", 
+"price":"$10.99", 
+"published":true 
+}
+]

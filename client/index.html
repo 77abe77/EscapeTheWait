@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en" ng-app="application">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Foundation for Apps</title>
+		<link href="./assets/css/app.css" rel="stylesheet" type="text/css">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/2.9.0/rzslider.min.css" rel="stylesheet" type="text/css">
+		<script src="./assets/js/foundation.js"></script>
+		<script src="./assets/js/templates.js"></script>
+		<script src="./assets/js/routes.js"></script>
+		<script src="./assets/myjs/truncate.js"></script>
+
+		<script src="./assets/js/app.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/2.9.0/rzslider.min.js"></script>
+
+	</head>
+	<body  zf-esc-close zf-close-all ng-class="{ 'cart-open': cartActive, 'bookmark-open': bookmarkActive }" ng-controller="foundationController">
+
+		<section class="mobile-nav-bg" ng-controller="cartController">
+		<div class="grid-block" ng-show="helpActive" ng-hide="!helpActive">
+			<img src="./assets/img/help.jpg" ng-click="closeHelp()" style="    opacity: 0.5;    width: 375px;
+    height: 667px;"/>
+		</div>
+								<div class="grid-block" ng-show="helpActive"  ng-hide="!helpActive">
+									<a class="success button full" href="#" style="width:100%" ng-click="closeHelp()">Cancel</a>
+								</div>
+			<nav class='mobile-nav-links' ng-hide="helpActive">
+				<div class="mobile-container-cart" ng-show="cartActive">
+					<ul  class="item">
+						<li>
+							<p>
+								Chilli's
+								<span> 3355 The Alameda </span>
+								<span> (404)398-1074 </span>
+							</p>
+						</li>
+						<li>
+							<div class="grid-block">
+								<div class="grid-block">
+									<p>
+										Table: 2
+										<span> Guests: 4 </span>
+										<span> - </span>
+									</p>
+								</div>
+								<div class="grid-block">
+									<p>
+										Check: 3719
+										<span> Date: 03/06/2016 </span>
+										<span> Time: 8:45:30 PM </span>
+									</p>
+
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="grid-block" ng-hide="quantity1 == '0'">
+								<div id="menu-item-quantitiy" class="grid-block shrink"  counter value="quantity1" min="0" max="30" step="1" editable>
+									1
+								</div>
+								<div id="menu-item-name" class="grid-block">
+									Fresh Guacamole
+								</div>
+								<div id="menu-item-price" class="grid-block shrink">
+									$6
+								</div>
+							</div>
+						</li>
+
+						<li>
+							<div class="grid-block"  ng-hide="quantity2 == '0'">
+								<div id="menu-item-quantitiy" class="grid-block shrink"  counter value="quantity2" min="0" max="30" step="1" editable>
+									1
+								</div>
+								<div id="menu-item-name" class="grid-block">
+									Santa Fe Chicken Salad
+								</div>
+								<div id="menu-item-price" class="grid-block shrink">
+									$8.5
+								</div>
+							</div>
+						</li>
+
+						<li>
+							<div class="grid-block"  ng-hide="quantity3 == '0'">
+								<div id="menu-item-quantitiy" class="grid-block shrink"  counter value="quantity3" min="0" max="30" step="1" editable>
+									1
+								</div>
+								<div id="menu-item-name" class="grid-block">
+									Santa Fe Chicken Salad
+								</div>
+								<div id="menu-item-price" class="grid-block shrink">
+									$8.5
+								</div>
+							</div>
+						</li>
+
+						<li>
+							<div class="grid-block"  ng-hide="quantity4 == '0'">
+								<div id="menu-item-quantitiy" class="grid-block shrink"  counter value="quantity4" min="0" max="30" step="1" editable>
+									1
+								</div>
+								<div id="menu-item-name" class="grid-block">
+									Santa Fe Chicken Salad
+								</div>
+								<div id="menu-item-price" class="grid-block shrink">
+									$8.5
+								</div>
+							</div>
+						</li>
+
+						<li>
+							<div class="grid-block"  ng-hide="quantity5 == '0'">
+								<div id="menu-item-quantitiy" class="grid-block shrink"  counter value="quantity5" min="0" max="30" step="1" editable>
+									1
+								</div>
+								<div id="menu-item-name" class="grid-block">
+									Santa Fe Chicken Salad
+								</div>
+								<div id="menu-item-price" class="grid-block shrink">
+									$8.5
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="grid-block">
+								<div id="menu-item-quantitiy" class="grid-block">
+
+								</div>
+								<div id="menu-item-total" class="grid-block shrink">
+									Sub Total:
+								</div>
+								<div id="menu-item-price" class="grid-block shrink">
+									$8.5
+								</div>
+							</div>
+							<div class="grid-block">
+								<div id="menu-item-quantitiy" class="grid-block">
+
+								</div>
+								<div id="menu-item-total" class="grid-block shrink">
+									Tax:
+								</div>
+								<div id="menu-item-price" class="grid-block shrink">
+									$8.5
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="grid-block ">
+								<div class="grid-block">
+									<a class="alert button full" href="#"  ng-click="toggleCart()">Cancel</a>
+								</div>
+								<div class="grid-block">
+									<a class="success button full" href="#">Checkout</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							Follow us:
+						</li>
+						<li>
+							<a href="https://www.facebook.com" target="_blank"> <img src="./assets/img/facebookB.png" id="img1" style="width: 50px;"> </a>
+							<a href="https://www.instagram.com" target="_blank"> <img src="./assets/img/instagramB.png" id="img1" style="width: 50px;"> </a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="mobile-container-bookmark" ng-show="bookmarkActive">
+
+					<zf-accordion collapsible="true" multi-open="false">
+						<zf-accordion-item ng-repeat="item in bookmarkData"  title="{{item.title}}">
+							<div class="dark card" ng-show="item.published">
+								<img ng-src="./assets/img/{{item.imageUrl}}">
+								<div class="card-divider">
+									{{ item.title }}
+								</div>
+								<div class="card-section">
+									<h4>{{ item.price }}</h4>
+									<p>
+										{{ item.text | words:numWords  : breakOnWord }}
+									</p>
+								</div>
+								<a href="#" class="button"  ng-click="UserService.addCart(item.id)" title="{{item.title}} added to Shopping Cart" content="{{UserService.cartCount()+1}} items in your cart" color="success" autoclose="3000" zf-notify="main-notifications"> <img zf-iconic="" icon="cart" size="small">Add to cart</a>
+								<zf-notification-set id="main-notifications" position="top-left"></zf-notification-set>
+
+							</div>
+
+						</zf-accordion-item>
+
+					</zf-accordion>
+
+				</div>
+				</div>
+
+			</nav>
+
+		</section>
+
+		<zf-offcanvas id="mobile-menu" position="left" class="detached">
+			<div class="grid-content">
+				<a href="#" zf-close class="close-button">&times;</a>
+				<h3>This is a left off-canvas menu.</h3>
+			</div>
+		</zf-offcanvas>
+
+		<div class="grid-frame vertical mobile">
+			<div class="grid-content shrink menu" style="padding: 0;">
+				<div class="title-bar search-bar" style="
+				padding-bottom: 10px;
+				padding-left: 10px;
+				padding-top: 10px;
+				padding-right: 10px;
+				">
+					<div class="center title">
+
+						<div zf-action-sheet="">
+							<zf-as-button><img src="./assets/img/Chilis_logo.png">
+							</zf-as-button>
+							<div zf-as-content="" position="bottom">
+								<p>
+									Tap to share
+								</p>
+								<ul>
+									<li>
+										<a href="#">Twitter</a>
+									</li>
+									<li>
+										<a href="#">Facebook</a>
+									</li>
+									<li>
+										<a href="#">Mail</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<span class="left">
+						
+						<form id="demo-2">
+							<input type="search" placeholder="Search" ng-model="query">
+						</form> 
+						
+					</span>
+				</div>
+			</div>
+			<div class="hr-caption">
+				<span ui-sref-active="page-is-active"> <a ui-sref="home">Home</a> </span>
+				<span ui-sref-active="page-is-active"> <a ui-sref="entree">Entree</a> </span>
+				<span ui-sref-active="page-is-active"> <a ui-sref="drinks">Drinks</a> </span>
+				<span ui-sref-active="page-is-active"> <a ui-sref="bookmark">bookmark</a> </span>
+			</div>
+			<div class="bottom-menu">
+				<ul class="menu-bar" ng-controller="bottomMenuController">
+					<li>
+						<a href="#" class="badge1" data-badge="27" class="button" ng-click="toggleHelp()">
+
+<img zf-iconic="" icon="info" size="medium" class="iconic-color-primary">
+<span>Help</span>
+</a>
+					</li>
+					<li>
+						<a href="#" class="badge1" ng-class="{ 'button alert': waiterCalled}" ng-click="callWaiter()" data-badge="27"> <img zf-iconic="" icon="bell" size="medium" class="iconic-color-success"><span ng-hide="counter==0" ng-bind="counter"></span><span class="hide-on-small" ng-show="counter==0">Call Waiter</span></a>
+					</li>
+					<li ui-sref-active="active">
+						<a ui-sref="bookmark" class="badge2" data-badge="27"> <img zf-iconic="" icon="bookmark" size="medium" class="iconic-color-success"><span ng-hide="UserService.bookmarkCount()==0" >{{UserService.bookmarkCount()}}</span><span class="hide-on-small" ng-show="UserService.bookmarkCount()==0">Bookmark</span></a>
+					</li>
+					<li>
+						<a href="#" class="badge3" data-badge="27" ng-click="toggleCart()"> <img zf-iconic="" icon="cart" size="medium" class="iconic-color-success"><span ng-hide="UserService.cartCount()==0">{{UserService.cartCount()}}</span><span class="hide-on-small" ng-show="UserService.cartCount()==0">Cart</span></a>
+					</li>
+				</ul>
+			</div>
+
+			<div zf-modal="headCountModal" id="headCountModal" class="collapse">
+				<div class="grid-block vertical">
+					<div class="primary title-bar">
+						<div class="center title">
+							How many people is in your party?
+						</div>
+						<span zf-close="" class="left"><a>Cancel</a></span>
+						<span zf-close="" class="right"><a>Save</a></span>
+					</div>
+					<div ng-controller="dialogController" class="grid-content padding" style="padding-top: 1rem;">
+						<p>
+							<rzslider rz-slider-model="slider_ticks.value" rz-slider-options="slider_ticks.options"></rzslider>
+						</p>
+						<a zf-close="" class="button" ng-click="UserService.setPartyNum(slider_ticks.value)">Save</a>
+						<a zf-close="" class="button">Cancel</a>
+					</div>
+				</div>
+			</div>
+
+			<zf-notification-set id="main-notifications" position="top-left"></zf-notification-set>
+
+			<div ui-view class="grid-content"></div>
+		</div>
+	</body>
+</html>

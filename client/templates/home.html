@@ -1,0 +1,33 @@
+---
+name: home
+url: /
+animationIn: slideInRight
+---
+
+
+
+
+<div class="grid-container menu" ng-controller="menuController">
+
+<zf-accordion collapsible="true" multi-open="false">
+<zf-accordion-item ng-repeat="item in menuData  | filter:query"  title="{{item.title}}">
+      <div class="dark card" ng-show="item.published"> <img ng-src="./assets/img/{{item.imageUrl}}">
+        <div class="card-divider"> {{ item.title }} </div>
+        <div class="card-section">
+          <h4>{{ item.price }}</h4>
+          <p>{{ item.text | words:numWords  : breakOnWord }}</p>
+        </div>
+        <a href="#" class="button"  ng-click="UserService.addCart(item.id)" title="{{item.title}} added to Shopping Cart" content="{{UserService.cartCount()+1}} items in your cart" color="success" autoclose="3000" zf-notify="main-notifications"> <img zf-iconic="" icon="cart" size="small">Add to cart</a>
+        <zf-notification-set id="main-notifications" position="top-left"></zf-notification-set>
+        
+      </div>
+      
+</zf-accordion-item>
+
+</zf-accordion>
+
+
+  </div>
+</div>
+
+
